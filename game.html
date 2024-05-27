@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Eliot Tulli's portfolio</title>
 <link href="./style/main.css" rel="stylesheet">
+<link href="./style/game.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,23 +31,20 @@
 </header>
 <main>
     <h1> Games </h1>
+    <div id="choiceMenuDiv">
+      <div class="buttonMenu">
+      <button onclick="replaceDivWithArticle(1)">Sokoban AI</button>
+      <button onclick="replaceDivWithArticle(2)">KusBlo</button>
+      <button onclick="replaceDivWithArticle(3)">Pac Man AI</button>
+    </div>
+    </div>
 
-    <article>
-        <h2>Sokoban AI</h2>
-        <img src="./images/game/Sokoban.png" alt="Picture of Sokoban game">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </article>
-    <article>
-        <h2>Game based on Blokus</h2>
-        <img src="./images/game/Kusblo.png" alt="Picture of Kusblo game">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </article>    
-    <article>
-        <h2>Pac Man Ghosts AI</h2>
-        <img src="./images/game/Pacman.png" alt="Picture of Pacman game">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </article>
+           
+
 </main>
+
+<aside id="leftAside"></aside>
+<aside id="rigthAside"></aside>
 <footer>
   <div>
     <h3>Contact</h3>
@@ -61,4 +59,63 @@
 </footer>
 </body>
 
-</body>
+
+<script>
+  function replaceDivWithArticle(article) {
+
+      const divToReplace = document.getElementById('choiceMenuDiv');
+      const newArticle = document.createElement('div');
+      newArticle.setAttribute("id", "choiceMenuDiv");
+      if(article==1){
+        newArticle.innerHTML = `
+      <article>
+        <div class="actionMenu">
+        <button onclick="replaceDivWithArticle(0)">Home</button> 
+        <button onclick="replaceDivWithArticle(2)">Next</button>
+        </div>
+        <h2>Sokoban AI</h2>
+        <img src="./images/game/Sokoban.png" alt="Picture of Sokoban game" class="horizontal">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </article>
+      `;
+      }
+      if(article==2){
+        newArticle.innerHTML = `
+    <article>
+      <div>
+        <button onclick="replaceDivWithArticle(1)">Previous</button> 
+        <button onclick="replaceDivWithArticle(0)">Home</button>
+        <button onclick="replaceDivWithArticle(3)">Next</button>
+        </div>
+        <h2>Game based on Blokus</h2>
+        <img src="./images/game/Kusblo.png" alt="Picture of Kusblo game" class="horizontal">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </article> 
+      `;
+      }      if(article==3){
+        newArticle.innerHTML = `
+    <article>
+      <div>
+        <button onclick="replaceDivWithArticle(2)">Previous</button> 
+        <button onclick="replaceDivWithArticle(0)">Home</button>
+        </div>
+        <h2>Pac Man Ghosts AI</h2>
+        <img src="./images/game/Pacman.png" alt="Picture of Pacman game" class="vertical">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </article>
+      `;
+      }
+
+      if(article==0){
+        newArticle.innerHTML = `
+        <div class="buttonMenu">
+      <button onclick="replaceDivWithArticle(1)">Sokoban AI</button>
+      <button onclick="replaceDivWithArticle(2)">KusBlo</button>
+      <button onclick="replaceDivWithArticle(3)">Pac Man AI</button>
+    </div>
+      `;
+      }
+
+      divToReplace.parentNode.replaceChild(newArticle, divToReplace);
+  }
+</script>

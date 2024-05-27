@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Eliot Tulli's portfolio</title>
 <link href="./style/main.css" rel="stylesheet">
+<link href="./style/app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,19 +31,18 @@
 </header>
 <main>
     <h1> Application </h1>
+    <div id="choiceMenuDiv">
+      <div class="buttonMenu">
+      <button onclick="replaceDivWithArticle(1)">Elf Reader</button>
+      <button onclick="replaceDivWithArticle(2)">MoonQuizz</button>
+    </div>
+    </div>
 
-    <article>
-        <h2>Elf reader</h2>
-        <img src="./images/app/elf.png" alt="Picture of output of elf reader">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </article>
-    <article>
-        <h2>Moonquizz</h2>
-        <img src="./images/app/moonquizz.png" alt="Picture of mobile app Moonquizz">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </article>    
+
+         
 </main>
-
+<aside id="leftAside"></aside>
+<aside id="rigthAside"></aside>
 <footer>
   <div>
     <h3>Contact</h3>
@@ -56,4 +56,51 @@
   </div>
 </footer>
 </body>
-</body>
+
+
+
+<script>
+  function replaceDivWithArticle(article) {
+
+      const divToReplace = document.getElementById('choiceMenuDiv');
+      const newArticle = document.createElement('div');
+      newArticle.setAttribute("id", "choiceMenuDiv");
+      if(article==1){
+        newArticle.innerHTML = `
+      <article>
+        <div class="actionMenu">
+        <button onclick="replaceDivWithArticle(0)">Home</button> 
+        <button onclick="replaceDivWithArticle(2)">Next</button>
+        </div>
+        <h2>Elf reader</h2>
+        <img src="./images/app/elf.png" alt="Picture of output of elf reader" class="vertical">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </article>
+      `;
+      }
+      if(article==2){
+        newArticle.innerHTML = `
+    <article>
+      <div>
+        <button onclick="replaceDivWithArticle(1)">Previous</button> 
+        <button onclick="replaceDivWithArticle(0)">Home</button>
+        </div>
+        <h2>Moonquizz</h2>
+        <img src="./images/app/moonquizz.png" alt="Picture of mobile app Moonquizz" class="vertical">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </article>  
+      `;
+      }
+
+      if(article==0){
+        newArticle.innerHTML = `
+        <div class="buttonMenu">
+      <button onclick="replaceDivWithArticle(1)">Elf Reader</button>
+      <button onclick="replaceDivWithArticle(2)">MoonQuizz</button>
+    </div>
+      `;
+      }
+
+      divToReplace.parentNode.replaceChild(newArticle, divToReplace);
+  }
+</script>

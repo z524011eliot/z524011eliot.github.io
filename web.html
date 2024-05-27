@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Eliot Tulli's portfolio</title>
 <link href="./style/main.css" rel="stylesheet">
+<link href="./style/web.css" rel="stylesheet">
 </head>
 
 <body>
@@ -12,8 +13,8 @@
     <img src="./images/Amraphel.jpg" alt="Logo of Eliot Tulli">
     <div class="blank"></div>
     <div class="title">   
-      <h1>My portfolio</h1>
-      <p>by Eliot Tulli</p>
+        <h1>My portfolio</h1>
+        <p>by Eliot Tulli</p>
     </div>
     <div class="blank"></div>
     <div class="endBlank"></div>
@@ -31,19 +32,16 @@
 </header>
 <main>
     <h1> Websites </h1>
-
-    <article>
-        <h2>Elf reader</h2>
-        <img src="./images/web/moontruc.png" alt="Picture of website moon...">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </article>
-    <article>
-        <h2>Isimon</h2>
-        <img src="./images/web/isimon.png" alt="Picture of website isimon">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </article>    
+    <div id="choiceMenuDiv">
+      <div class="buttonMenu">
+      <button onclick="replaceDivWithArticle(1)">MoonTruc</button>
+      <button onclick="replaceDivWithArticle(2)">Isimon</button>
+    </div>
+    </div>
+ 
 </main>
-
+<aside id="leftAside"></aside>
+<aside id="rigthAside"></aside>
 <footer>
   <div>
     <h3>Contact</h3>
@@ -58,3 +56,50 @@
 </footer>
 </body>
 </body>
+
+
+<script>
+  function replaceDivWithArticle(article) {
+
+      const divToReplace = document.getElementById('choiceMenuDiv');
+      const newArticle = document.createElement('div');
+      newArticle.setAttribute("id", "choiceMenuDiv");
+      if(article==1){
+        newArticle.innerHTML = `
+      <article>
+        <div class="actionMenu">
+        <button onclick="replaceDivWithArticle(0)">Home</button> 
+        <button onclick="replaceDivWithArticle(2)">Next</button>
+        </div>
+        <h2>Moon truc</h2>
+        <img src="./images/web/moontruc.png" alt="Picture of website moon..." class="horizontal">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </article>
+      `;
+      }
+      if(article==2){
+        newArticle.innerHTML = `
+    <article>
+      <div>
+        <button onclick="replaceDivWithArticle(1)">Previous</button> 
+        <button onclick="replaceDivWithArticle(0)">Home</button>
+        </div>
+        <h2>Isimon</h2>
+        <img src="./images/web/isimon.png" alt="Picture of website isimon" class="vertical">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </article>   
+      `;
+      }
+
+      if(article==0){
+        newArticle.innerHTML = `
+        <div class="buttonMenu">
+      <button onclick="replaceDivWithArticle(1)">MoonTruc</button>
+      <button onclick="replaceDivWithArticle(2)">Isimon</button>
+    </div>
+      `;
+      }
+
+      divToReplace.parentNode.replaceChild(newArticle, divToReplace);
+  }
+</script>
