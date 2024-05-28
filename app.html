@@ -9,15 +9,14 @@
 
 <body>
 <header>
+  <img src="./images/Amraphel.jpg" alt="Logo of Eliot Tulli">
   <div class="firstLine">
-    <img src="./images/Amraphel.jpg" alt="Logo of Eliot Tulli">
-    <div class="blank"></div>
+    <div></div>
     <div class="title">   
       <h1>My portfolio</h1>
       <p>by Eliot Tulli</p>
     </div>
-    <div class="blank"></div>
-    <div class="endBlank"></div>
+    <div></div>
   </div>
   <nav>
     <ul>
@@ -33,8 +32,8 @@
     <h1> Application </h1>
     <div id="choiceMenuDiv">
       <div class="buttonMenu">
-      <button onclick="replaceDivWithArticle(1)">Elf Reader</button>
-      <button onclick="replaceDivWithArticle(2)">MoonQuizz</button>
+      <button class="mainButton" onclick="replaceDivWithArticle(1)">Elf Reader</button>
+      <button class="mainButton" onclick="replaceDivWithArticle(2)">MoonQuizz</button>
     </div>
     </div>
 
@@ -95,8 +94,8 @@
       if(article==0){
         newArticle.innerHTML = `
         <div class="buttonMenu">
-      <button onclick="replaceDivWithArticle(1)">Elf Reader</button>
-      <button onclick="replaceDivWithArticle(2)">MoonQuizz</button>
+      <button class="mainButton" onclick="replaceDivWithArticle(1)">Elf Reader</button>
+      <button class="mainButton" onclick="replaceDivWithArticle(2)">MoonQuizz</button>
     </div>
       `;
       }

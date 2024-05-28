@@ -38,8 +38,8 @@ header {
     color: white;
     display: flex;
     flex-direction: column;
-    /* border-bottom: 2em solid;
-    border-color: black; */
+
+
 }
 
 
@@ -47,11 +47,14 @@ header {
     display:  flex;
     flex-direction: row;
     justify-content: space-between;
+    text-align: center;
+    height:10vh;
 }
 
-header div img {
-    grid-column: 1 ;
-    grid-row: 1;
+header img {
+    position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 50%;
     border: solid 2px;
     max-width:100%;
@@ -64,12 +67,7 @@ header div img {
 .title {
     width: 50%;
 }
-#endblank{
-    max-width:100%;
-    max-height:10vh;
-    width: auto;
-    height: auto;
-}
+
 
 
 
