@@ -93,18 +93,18 @@ nav ul a {
     border-color: white;
 
     list-style: none;
-    background-color: rgb(71, 71, 186);
+    background-color: #071d34;
     color: white;
     font-style: none;
     text-decoration: none;
 }
 
 nav ul a:hover {
-    border-color: rgb(71, 71, 186);
+    border-color: #1bddaa;
 
     list-style: none;
-    background-color: white;
-    color: rgb(71, 71, 186);
+    background-color: #1c3146;
+    color: #1bddaa;
     font-style: none;
     text-decoration: none;
 }
@@ -129,7 +129,7 @@ footer div {
     border-radius: 25%;
     padding: 3px;
     margin: 5px 0;
-    width: 25vw;
+    width: 35%;
     text-align: center  ;
     
 }
