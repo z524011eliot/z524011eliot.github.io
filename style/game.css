@@ -1,15 +1,4 @@
-article {
-    display: flex;
-    margin: 0 2em;
-    flex-direction: column;
-    background-color: #1c3146;
-    border: 2px solid;
-    border-color: white;
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 100%;
-    align-self: center;
-}
+
 
 
 .mainButton {
@@ -85,11 +74,5 @@ main {
 
 }
 
-article h1 {
-    height: 10%;
-}
 
-article p {
-    height: 20%;
-    text-size-adjust: auto;
-}
+

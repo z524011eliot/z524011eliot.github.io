@@ -42,7 +42,17 @@
 
 </main>
 
-<aside id="leftAside"></aside>
+<aside id="leftAside">
+  <div id="leftMenuButton" class="hidden">
+    <div class="buttonMenu">
+      <button class="mainButton" onclick="replaceDivWithArticle(1)">Sokoban AI</button>
+      <button class="mainButton" onclick="replaceDivWithArticle(2)">KusBlo</button>
+      <button class="mainButton" onclick="replaceDivWithArticle(3)">Pac Man AI</button>
+    </div>
+  </div>
+
+
+</aside>
 <aside id="rigthAside"></aside>
 <footer>
   <div>
@@ -51,7 +61,7 @@
     <h5>Phone : +33 XX XX XX XX XX</h5>
   </div>
   <div>
-    <h3>Other Link</h3>
+    <h3>Other Links</h3>
     <h5><a href="">Github</a></h5>
     <h5><a href="">Linkedin</a></h5>
   </div>
@@ -63,46 +73,44 @@
   function replaceDivWithArticle(article) {
 
       const divToReplace = document.getElementById('choiceMenuDiv');
+      const leftMenuButton = document.getElementById('leftMenuButton');
       const newArticle = document.createElement('div');
       newArticle.setAttribute("id", "choiceMenuDiv");
       if(article==1){
         newArticle.innerHTML = `
-      <article>
-        <div class="actionMenu">
-        <button onclick="replaceDivWithArticle(0)">Home</button> 
-        <button onclick="replaceDivWithArticle(2)">Next</button>
-        </div>
+      <article class="pictHori">
+        <button class ="homeButton" onclick="replaceDivWithArticle(0)"><img src="./images/home.png" alt="home logo"></button> 
+        <button class= "nextButton" onclick="replaceDivWithArticle(2)"><img src="./images/next.png" alt="next logo"></button>
         <h2>Sokoban AI</h2>
         <img src="./images/game/Sokoban.png" alt="Picture of Sokoban game" class="horizontal">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>AI that analyse the level to find the fastest way to finish it</p>
     </article>
       `;
+      leftMenuButton.setAttribute("class","showed");
       }
       if(article==2){
         newArticle.innerHTML = `
-    <article>
-      <div>
-        <button onclick="replaceDivWithArticle(1)">Previous</button> 
-        <button onclick="replaceDivWithArticle(0)">Home</button>
-        <button onclick="replaceDivWithArticle(3)">Next</button>
-        </div>
+    <article  class="pictHori">
+        <button class ="prevButton" onclick="replaceDivWithArticle(1)"><img src="./images/prev.png" alt="previous logo"></button> 
+        <button class ="homeButton" onclick="replaceDivWithArticle(0)"><img src="./images/home.png" alt="home logo"></button>
+        <button class= "nextButton" onclick="replaceDivWithArticle(3)"><img src="./images/next.png" alt="next logo"></button>
         <h2>Game based on Blokus</h2>
         <img src="./images/game/Kusblo.png" alt="Picture of Kusblo game" class="horizontal">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Game base on board game Blokus. Different level of AI. Coded in Java with Swing library</p>
     </article> 
       `;
+      leftMenuButton.setAttribute("class","showed");
       }      if(article==3){
         newArticle.innerHTML = `
-    <article>
-      <div>
-        <button onclick="replaceDivWithArticle(2)">Previous</button> 
-        <button onclick="replaceDivWithArticle(0)">Home</button>
-        </div>
+    <article class="pictHori">
+        <button class ="prevButton" onclick="replaceDivWithArticle(2)"><img src="./images/prev.png" alt="previous logo"></button> 
+        <button class ="homeButton" onclick="replaceDivWithArticle(0)"><img src="./images/home.png" alt="home logo"></button>
         <h2>Pac Man Ghosts AI</h2>
         <img src="./images/game/Pacman.png" alt="Picture of Pacman game" class="vertical">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Reinforcement AI for the ghost. Game created from scratch and AI trained from basic level</p>
     </article>
       `;
+      leftMenuButton.setAttribute("class","showed");
       }
 
       if(article==0){
@@ -113,6 +121,7 @@
       <button class="mainButton" onclick="replaceDivWithArticle(3)">Pac Man AI</button>
     </div>
       `;
+      leftMenuButton.setAttribute("class","hidden");
       }
 
       divToReplace.parentNode.replaceChild(newArticle, divToReplace);

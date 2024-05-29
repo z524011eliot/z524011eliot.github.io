@@ -40,7 +40,13 @@
 
          
 </main>
-<aside id="leftAside"></aside>
+<aside id="leftAside">
+  <div id="leftMenuButton" class="hidden">
+    <div class="buttonMenu">
+      <button class="mainButton" onclick="replaceDivWithArticle(1)">Elf Reader</button>
+      <button class="mainButton" onclick="replaceDivWithArticle(2)">MoonQuizz</button>
+    </div>
+</aside>
 <aside id="rigthAside"></aside>
 <footer>
   <div>
@@ -49,12 +55,13 @@
     <h5>Phone : +33 XX XX XX XX XX</h5>
   </div>
   <div>
-    <h3>Other Link</h3>
+    <h3>Other Links</h3>
     <h5><a href="">Github</a></h5>
     <h5><a href="">Linkedin</a></h5>
   </div>
 </footer>
 </body>
+
 
 
 
@@ -66,29 +73,32 @@
       newArticle.setAttribute("id", "choiceMenuDiv");
       if(article==1){
         newArticle.innerHTML = `
-      <article>
-        <div class="actionMenu">
-        <button onclick="replaceDivWithArticle(0)">Home</button> 
-        <button onclick="replaceDivWithArticle(2)">Next</button>
-        </div>
+      <article class="pictVert">
+        <button class ="homeButton" onclick="replaceDivWithArticle(0)"><img src="./images/home.png" alt="home logo"></button> 
+        <button class ="nextButton" onclick="replaceDivWithArticle(2)"><img src="./images/next.png" alt="next logo"></button>
+
         <h2>Elf reader</h2>
         <img src="./images/app/elf.png" alt="Picture of output of elf reader" class="vertical">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Dissassembler and interpreter of ELF format file
+          <br><br> Group Work of 6 people
+          <br><br> Coded in C</p>
     </article>
       `;
+      leftMenuButton.setAttribute("class","showed");
       }
       if(article==2){
         newArticle.innerHTML = `
-    <article>
-      <div>
-        <button onclick="replaceDivWithArticle(1)">Previous</button> 
-        <button onclick="replaceDivWithArticle(0)">Home</button>
-        </div>
+    <article class="pictVert">
+        <button class ="prevButton" onclick="replaceDivWithArticle(1)"><img src="./images/prev.png" alt="previous logo"></button> 
+        <button class ="homeButton" onclick="replaceDivWithArticle(0)"><img src="./images/home.png" alt="home logo">  </button>
         <h2>Moonquizz</h2>
         <img src="./images/app/moonquizz.png" alt="Picture of mobile app Moonquizz" class="vertical">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Created in Android studion
+          <br><br> In java and XML
+          <br><br> Educative mobile application for quizz</p>
     </article>  
       `;
+      leftMenuButton.setAttribute("class","showed");
       }
 
       if(article==0){
@@ -98,6 +108,7 @@
       <button class="mainButton" onclick="replaceDivWithArticle(2)">MoonQuizz</button>
     </div>
       `;
+      leftMenuButton.setAttribute("class","hidden");
       }
 
       divToReplace.parentNode.replaceChild(newArticle, divToReplace);
