@@ -393,3 +393,60 @@ article h2 {
         visibility: hidden;
     }
 }
+
+
+@media (pointer:none), (pointer:coarse) {
+    nav ul {
+        display: flex;
+
+        width: 100vw;
+    }
+
+    nav ul a {
+        border-radius: 0%;
+        width: 25%;
+
+
+    }
+
+    nav ul a:hover {
+        border-radius: 0%;
+
+    }
+
+    main {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+    }
+
+    #leftAside {
+        grid-column: none;
+        grid-row: none;
+
+    }
+
+    #rightAside {
+        grid-column: none;
+        grid-row: none;
+
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        border: solid 2px;
+        border-color: white;
+        border-radius: 0%;
+        padding: 3px;
+        margin: 5px 0;
+        width: 45%;
+        text-align: center;
+
+    }
+
+    .showedLeft {
+        display: none;
+        visibility: hidden;
+    }
+}
