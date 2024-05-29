@@ -1,8 +1,9 @@
 * {
     margin: 0;
 }
+
 body {
-    margin: 0 ;
+    margin: 0;
     background-color: #071d34;
     color: white;
     display: grid;
@@ -13,17 +14,19 @@ body {
 /* Grid Placement */
 main {
     grid-column: 2;
-    grid-row: 2;   
-}
-#leftAside {
-    grid-column: 1 ;
     grid-row: 2;
-    
 }
+
+#leftAside {
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
 #rightAside {
     grid-column: 3;
     grid-row: 2;
-    
+
 }
 
 
@@ -44,11 +47,11 @@ header {
 
 
 .firstLine {
-    display:  flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    height:10vh;
+    height: 10vh;
 }
 
 header img {
@@ -57,8 +60,8 @@ header img {
     left: 0;
     border-radius: 50%;
     border: solid 2px;
-    max-width:100%;
-    max-height:10vh;
+    max-width: 100%;
+    max-height: 10vh;
     width: auto;
     height: auto;
 }
@@ -66,16 +69,29 @@ header img {
 
 .title {
     width: 50%;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -1px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: #1bddaa;
+    outline: none;
+    text-align: center;
 }
 
-
+.title:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 2px;
+}
 
 
 
 /* nav style */
 nav {
-    background-color: #1c3146; 
+    background-color: #1c3146;
 }
+
 nav ul {
     display: flex;
     justify-content: space-around;
@@ -85,8 +101,8 @@ nav ul {
 
 nav ul a {
     margin: 10px 0;
-    padding: 10px  0;
-    width: 20% ;
+    padding: 10px 0;
+    width: 20%;
     border: 3px solid;
     border-color: white;
 
@@ -128,8 +144,8 @@ footer div {
     padding: 3px;
     margin: 5px 0;
     width: 35%;
-    text-align: center  ;
-    
+    text-align: center;
+
 }
 
 footer div a {
@@ -145,12 +161,13 @@ main h1 {
 
 article img {
     display: block;
-    margin: auto; 
+    margin: auto;
     width: auto;
     height: auto;
     border: solid 2px;
     border-color: #1bddaa;
 }
+
 article {
     display: grid;
     margin: 0 2em;
@@ -161,7 +178,7 @@ article {
     border-color: white;
     padding-left: 10%;
     padding-right: 10%;
-    height: 100%;
+    height: 95%;
     align-self: center;
 }
 
@@ -172,7 +189,7 @@ article h2 {
     grid-row: 2;
 }
 
-.pictHori  p {
+.pictHori p {
     height: 20%;
     text-size-adjust: auto;
     grid-column: 1 /-1;
@@ -187,7 +204,7 @@ article h2 {
 
 }
 
-.pictVert  p {
+.pictVert p {
     height: 20%;
     text-size-adjust: auto;
     grid-column: 4 /-1;
@@ -202,12 +219,13 @@ article h2 {
 
 }
 
- .prevButton {
+.prevButton {
     grid-column: 2;
     grid-row: 1;
     background-color: #071d34;
 }
-.prevButton:hover  {
+
+.prevButton:hover {
 
     background-color: #1c3146;
     border-color: #1bddaa;
@@ -218,12 +236,14 @@ article h2 {
     border-radius: 50%;
     border: none;
 }
-.homeButton  {
+
+.homeButton {
     grid-column: 3;
-    grid-row: 1;    
+    grid-row: 1;
     background-color: #071d34;
 }
-.homeButton:hover  {
+
+.homeButton:hover {
 
     background-color: #1c3146;
     border-color: #1bddaa;
@@ -240,7 +260,8 @@ article h2 {
     grid-row: 1;
     background-color: #071d34;
 }
-.nextButton:hover  {   
+
+.nextButton:hover {
     background-color: #1c3146;
     border-color: #1bddaa;
 }
@@ -254,7 +275,7 @@ article h2 {
 .showed {
     width: 100%;
     height: 95%;
-    padding-bottom: 5% ;
+    padding-bottom: 5%;
 
 }
 
@@ -278,9 +299,9 @@ article h2 {
     z-index: 1;
     font-family: inherit;
     color: #17C3B2;
-   }
-   
-   .mainButton::before {
+}
+
+.mainButton::before {
     content: '';
     width: 0;
     height: 300%;
@@ -292,15 +313,15 @@ article h2 {
     transition: .5s ease;
     display: block;
     z-index: -1;
-   }
-   
-   .mainButton:hover::before {
+}
+
+.mainButton:hover::before {
     width: 105%;
-   }
-   
-   .mainButton:hover {
+}
+
+.mainButton:hover {
     color: #111;
-   }
+}
 
 
 /* main page */
@@ -308,7 +329,7 @@ article h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    text-align: center  ;
+    text-align: center;
     margin-top: 10%;
 }
 
@@ -323,14 +344,14 @@ article h2 {
 
         width: 100vw;
     }
-    
+
     nav ul a {
         border-radius: 0%;
         width: 25%;
 
 
     }
-    
+
     nav ul a:hover {
         border-radius: 0%;
 
@@ -339,19 +360,21 @@ article h2 {
     main {
         grid-column: 1 / -1;
         grid-row: 2;
-        
+
     }
+
     #leftAside {
-        grid-column: none ;
+        grid-column: none;
         grid-row: none;
-        
+
     }
+
     #rightAside {
         grid-column: none;
         grid-row: none;
-        
+
     }
-    
+
     footer div {
         display: flex;
         flex-direction: column;
@@ -361,12 +384,12 @@ article h2 {
         padding: 3px;
         margin: 5px 0;
         width: 45%;
-        text-align: center  ;
-        
+        text-align: center;
+
     }
 
     .showed {
         display: none;
         visibility: hidden;
     }
- }
+}

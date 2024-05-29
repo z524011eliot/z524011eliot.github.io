@@ -1,129 +1,141 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Eliot Tulli's portfolio</title>
-<link href="./style/main.css" rel="stylesheet">
-<link href="./style/game.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Eliot Tulli's portfolio</title>
+  <link href="./style/main.css" rel="stylesheet">
+  <link href="./style/game.css" rel="stylesheet">
 </head>
 
 <body>
-<header>
-  <img src="./images/Amraphel.jpg" alt="Logo of Eliot Tulli">
-  <div class="firstLine">
-    <div></div>
-    <div class="title">   
-      <h1>My portfolio</h1>
-      <p>by Eliot Tulli</p>
+  <header>
+    <img src="./images/Amraphel.jpg" alt="Logo of Eliot Tulli">
+    <div class="firstLine">
+      <div></div>
+      <div class="title">
+        <h1>My portfolio</h1>
+        <p>by Eliot Tulli</p>
+      </div>
+      <div></div>
     </div>
-    <div></div>
-  </div>
-  <nav>
-    <ul>
-      <a href="index.html"><li>Home</li></a>
-      <a href="app.html"><li>Applications & Programs</li></a>
-      <a href="game.html"><li>Games</li></a>
-      <a href="web.html"><li>Websites</li></a>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+        <a href="app.html">
+          <li>Applications & Programs</li>
+        </a>
+        <a href="game.html">
+          <li>Games</li>
+        </a>
+        <a href="web.html">
+          <li>Websites</li>
+        </a>
+      </ul>
+    </nav>
 
-</header>
-<main>
+  </header>
+  <main>
     <h1> Games </h1>
-    <div id="choiceMenuDiv">
+    <div id="choiceMenuDiv" class="showed">
       <div class="buttonMenu">
-      <button class="mainButton" onclick="replaceDivWithArticle(1)">Sokoban AI</button>
-      <button class="mainButton" onclick="replaceDivWithArticle(2)">KusBlo</button>
-      <button class="mainButton" onclick="replaceDivWithArticle(3)">Pac Man AI</button>
+        <button class="mainButton" onclick="changeDivShowed(1)">Sokoban AI</button>
+        <button class="mainButton" onclick="changeDivShowed(2)">KusBlo</button>
+        <button class="mainButton" onclick="changeDivShowed(3)">Pac Man AI</button>
+      </div>
     </div>
+
+    <div id="article1" class="'hidden">
+      <article class="pictHori">
+        <button class="homeButton" onclick="changeDivShowed(0)"><img src="./images/home.png" alt="home logo"></button>
+        <button class="nextButton" onclick="changeDivShowed(2)"><img src="./images/next.png" alt="next logo"></button>
+        <h2>Sokoban AI</h2>
+        <img src="./images/game/Sokoban.png" alt="Picture of Sokoban game" class="horizontal">
+        <p>AI that analyze the level to find the fastest way to finish it. Coded in Java with Swing library.</p>
+      </article>
+    </div>
+    <div id="article2" class="'hidden">
+      <article class="pictHori">
+        <button class="prevButton" onclick="changeDivShowed(1)"><img src="./images/prev.png"
+            alt="previous logo"></button>
+        <button class="homeButton" onclick="changeDivShowed(0)"><img src="./images/home.png" alt="home logo"></button>
+        <button class="nextButton" onclick="changeDivShowed(3)"><img src="./images/next.png" alt="next logo"></button>
+        <h2>Game based on Blokus</h2>
+        <img src="./images/game/Kusblo.png" alt="Picture of Kusblo game" class="horizontal">
+        <p>Game base on board game Blokus. Different levels of AI. Coded in Java with Swing library</p>
+      </article>
+    </div>
+    <div id="article3" class="'hidden">
+      <article class="pictHori">
+        <button class="prevButton" onclick="changeDivShowed(2)"><img src="./images/prev.png"
+            alt="previous logo"></button>
+        <button class="homeButton" onclick="changeDivShowed(0)"><img src="./images/home.png" alt="home logo"></button>
+        <h2>Pac Man Ghosts AI</h2>
+        <img src="./images/game/Pacman.png" alt="Picture of Pacman game" class="vertical">
+        <p>Reinforcement AI for the ghosts. Game created from scratch and AI trained from basic level. Coded in C.</p>
+      </article>
     </div>
 
-           
+  </main>
 
-</main>
-
-<aside id="leftAside">
-  <div id="leftMenuButton" class="hidden">
-    <div class="buttonMenu">
-      <button class="mainButton" onclick="replaceDivWithArticle(1)">Sokoban AI</button>
-      <button class="mainButton" onclick="replaceDivWithArticle(2)">KusBlo</button>
-      <button class="mainButton" onclick="replaceDivWithArticle(3)">Pac Man AI</button>
+  <aside id="leftAside">
+    <div id="leftMenuButton" class="hidden">
+      <div class="buttonMenu">
+        <button class="mainButton" onclick="changeDivShowed(1)">Sokoban AI</button>
+        <button class="mainButton" onclick="changeDivShowed(2)">KusBlo</button>
+        <button class="mainButton" onclick="changeDivShowed(3)">Pac Man AI</button>
+      </div>
     </div>
-  </div>
 
 
-</aside>
-<aside id="rigthAside"></aside>
-<footer>
-  <div>
-    <h3>Contact</h3>
-    <h5>Mail : eliot.tulli@...com</h5>
-    <h5>Phone : +33 XX XX XX XX XX</h5>
-  </div>
-  <div>
-    <h3>Other Links</h3>
-    <h5><a href="">Github</a></h5>
-    <h5><a href="">Linkedin</a></h5>
-  </div>
-</footer>
+  </aside>
+  <aside id="rigthAside"></aside>
+  <footer>
+    <div>
+      <h3>Contact</h3>
+      <h5>Mail : eliot.tulli@...com</h5>
+      <h5>Phone : +33 XX XX XX XX XX</h5>
+    </div>
+    <div>
+      <h3>Other Links</h3>
+      <h5><a href="">Github</a></h5>
+      <h5><a href="">Linkedin</a></h5>
+    </div>
+  </footer>
 </body>
 
 
 <script>
-  function replaceDivWithArticle(article) {
-
-      const divToReplace = document.getElementById('choiceMenuDiv');
-      const leftMenuButton = document.getElementById('leftMenuButton');
-      const newArticle = document.createElement('div');
-      newArticle.setAttribute("id", "choiceMenuDiv");
-      if(article==1){
-        newArticle.innerHTML = `
-      <article class="pictHori">
-        <button class ="homeButton" onclick="replaceDivWithArticle(0)"><img src="./images/home.png" alt="home logo"></button> 
-        <button class= "nextButton" onclick="replaceDivWithArticle(2)"><img src="./images/next.png" alt="next logo"></button>
-        <h2>Sokoban AI</h2>
-        <img src="./images/game/Sokoban.png" alt="Picture of Sokoban game" class="horizontal">
-        <p>AI that analyse the level to find the fastest way to finish it</p>
-    </article>
-      `;
-      leftMenuButton.setAttribute("class","showed");
-      }
-      if(article==2){
-        newArticle.innerHTML = `
-    <article  class="pictHori">
-        <button class ="prevButton" onclick="replaceDivWithArticle(1)"><img src="./images/prev.png" alt="previous logo"></button> 
-        <button class ="homeButton" onclick="replaceDivWithArticle(0)"><img src="./images/home.png" alt="home logo"></button>
-        <button class= "nextButton" onclick="replaceDivWithArticle(3)"><img src="./images/next.png" alt="next logo"></button>
-        <h2>Game based on Blokus</h2>
-        <img src="./images/game/Kusblo.png" alt="Picture of Kusblo game" class="horizontal">
-        <p>Game base on board game Blokus. Different level of AI. Coded in Java with Swing library</p>
-    </article> 
-      `;
-      leftMenuButton.setAttribute("class","showed");
-      }      if(article==3){
-        newArticle.innerHTML = `
-    <article class="pictHori">
-        <button class ="prevButton" onclick="replaceDivWithArticle(2)"><img src="./images/prev.png" alt="previous logo"></button> 
-        <button class ="homeButton" onclick="replaceDivWithArticle(0)"><img src="./images/home.png" alt="home logo"></button>
-        <h2>Pac Man Ghosts AI</h2>
-        <img src="./images/game/Pacman.png" alt="Picture of Pacman game" class="vertical">
-        <p>Reinforcement AI for the ghost. Game created from scratch and AI trained from basic level</p>
-    </article>
-      `;
-      leftMenuButton.setAttribute("class","showed");
-      }
-
-      if(article==0){
-        newArticle.innerHTML = `
-        <div class="buttonMenu">
-      <button class="mainButton" onclick="replaceDivWithArticle(1)">Sokoban AI</button>
-      <button class="mainButton" onclick="replaceDivWithArticle(2)">KusBlo</button>
-      <button class="mainButton" onclick="replaceDivWithArticle(3)">Pac Man AI</button>
-    </div>
-      `;
-      leftMenuButton.setAttribute("class","hidden");
-      }
-
-      divToReplace.parentNode.replaceChild(newArticle, divToReplace);
+  function changeDivShowed(article) {
+    const leftMenuButton = document.getElementById('leftMenuButton');
+    if (article == 1) {
+      document.getElementById('article1').setAttribute("class", "showed");
+      document.getElementById('article2').setAttribute("class", "hidden");
+      document.getElementById('article3').setAttribute("class", "hidden");
+      document.getElementById('choiceMenuDiv').setAttribute("class", "hidden");
+      leftMenuButton.setAttribute("class", "showed");
+    }
+    if (article == 2) {
+      document.getElementById('article1').setAttribute("class", "hidden");
+      document.getElementById('article2').setAttribute("class", "showed");
+      document.getElementById('article3').setAttribute("class", "hidden");
+      document.getElementById('choiceMenuDiv').setAttribute("class", "hidden"); leftMenuButton.setAttribute("class", "showed");
+    }
+    if (article == 3) {
+      document.getElementById('article1').setAttribute("class", "hidden");
+      document.getElementById('article2').setAttribute("class", "hidden");
+      document.getElementById('article3').setAttribute("class", "showed");
+      document.getElementById('choiceMenuDiv').setAttribute("class", "hidden");
+      leftMenuButton.setAttribute("class", "showed");
+    }
+    if (article == 0) {
+      document.getElementById('article1').setAttribute("class", "hidden");
+      document.getElementById('article2').setAttribute("class", "hidden");
+      document.getElementById('article3').setAttribute("class", "hidden");
+      document.getElementById('choiceMenuDiv').setAttribute("class", "showed");
+      leftMenuButton.setAttribute("class", "hidden");
+    }
   }
 </script>
