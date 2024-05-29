@@ -279,6 +279,13 @@ article h2 {
 
 }
 
+.showedLeft {
+    width: 100%;
+    height: 95%;
+    padding-bottom: 5%;
+
+}
+
 
 .hidden {
     display: none;
@@ -321,6 +328,53 @@ article h2 {
 
 .mainButton:hover {
     color: #111;
+}
+
+#choiceMenuDiv {
+    width: 90%;
+    height: 90%;
+    padding: 0 5% 5% 5%;
+
+
+
+}
+
+.buttonMenu {
+    background-color: #1c3146;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+article a {
+    color: white;
+    text-decoration: none;
+}
+
+article a:hover {
+    color: #17C3B2;
+}
+
+main {
+    text-align: center;
+}
+
+.actionMenu {
+    height: 10%;
+
+}
+
+article h1 {
+    height: 10%;
+}
+
+article p {
+    height: 20%;
+    text-size-adjust: auto;
 }
 
 
@@ -392,10 +446,13 @@ article h2 {
         display: none;
         visibility: hidden;
     }
+
+
 }
 
 
-@media (pointer:none), (pointer:coarse) {
+@media (pointer:none),
+(pointer:coarse) {
     nav ul {
         display: flex;
 
