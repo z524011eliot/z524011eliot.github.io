@@ -442,7 +442,7 @@ article p {
 
     }
 
-    .showed {
+    .showedLeft {
         display: none;
         visibility: hidden;
     }
