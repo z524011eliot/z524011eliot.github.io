@@ -39,18 +39,18 @@
   </header>
   <main>
     <h1> Games </h1>
-    <div id="choiceMenuDiv" class="showed">
+    <div id="choiceMenuDiv" class="shown">
       <div class="buttonMenu">
-        <button class="mainButton" onclick="changeDivShowed(1)">Sokoban AI</button>
-        <button class="mainButton" onclick="changeDivShowed(2)">KusBlo</button>
-        <button class="mainButton" onclick="changeDivShowed(3)">Pac Man AI</button>
+        <button class="mainButton" onclick="changeDivShown(1)">Sokoban AI</button>
+        <button class="mainButton" onclick="changeDivShown(2)">KusBlo</button>
+        <button class="mainButton" onclick="changeDivShown(3)">Pac Man AI</button>
       </div>
     </div>
 
     <div id="article1" class="'hidden">
       <article class="pictHori">
-        <button class="homeButton" onclick="changeDivShowed(0)"><img src="./images/home.png" alt="home logo"></button>
-        <button class="nextButton" onclick="changeDivShowed(2)"><img src="./images/next.png" alt="next logo"></button>
+        <button class="homeButton" onclick="changeDivShown(0)"><img src="./images/home.png" alt="home logo"></button>
+        <button class="nextButton" onclick="changeDivShown(2)"><img src="./images/next.png" alt="next logo"></button>
         <h2>Sokoban AI</h2>
         <img src="./images/game/Sokoban.png" alt="Picture of Sokoban game" class="horizontal">
         <p>AI that analyze the level to find the fastest way to finish it. Coded in Java with Swing library.</p>
@@ -58,20 +58,20 @@
     </div>
     <div id="article2" class="'hidden">
       <article class="pictHori">
-        <button class="prevButton" onclick="changeDivShowed(1)"><img src="./images/prev.png"
+        <button class="prevButton" onclick="changeDivShown(1)"><img src="./images/prev.png"
             alt="previous logo"></button>
-        <button class="homeButton" onclick="changeDivShowed(0)"><img src="./images/home.png" alt="home logo"></button>
-        <button class="nextButton" onclick="changeDivShowed(3)"><img src="./images/next.png" alt="next logo"></button>
+        <button class="homeButton" onclick="changeDivShown(0)"><img src="./images/home.png" alt="home logo"></button>
+        <button class="nextButton" onclick="changeDivShown(3)"><img src="./images/next.png" alt="next logo"></button>
         <h2>Game based on Blokus</h2>
         <img src="./images/game/Kusblo.png" alt="Picture of Kusblo game" class="horizontal">
-        <p>Game base on board game Blokus. Different levels of AI. Coded in Java with Swing library</p>
+        <p>Game based on the board game Blokus. There are different levels of AI. Coded in Java with Swing library</p>
       </article>
     </div>
     <div id="article3" class="'hidden">
       <article class="pictHori">
-        <button class="prevButton" onclick="changeDivShowed(2)"><img src="./images/prev.png"
+        <button class="prevButton" onclick="changeDivShown(2)"><img src="./images/prev.png"
             alt="previous logo"></button>
-        <button class="homeButton" onclick="changeDivShowed(0)"><img src="./images/home.png" alt="home logo"></button>
+        <button class="homeButton" onclick="changeDivShown(0)"><img src="./images/home.png" alt="home logo"></button>
         <h2>Pac Man Ghosts AI</h2>
         <img src="./images/game/Pacman.png" alt="Picture of Pacman game" class="vertical">
         <p>Reinforcement AI for the ghosts. Game created from scratch and AI trained from basic level. Coded in C.</p>
@@ -83,9 +83,9 @@
   <aside id="leftAside">
     <div id="leftMenuButton" class="hidden">
       <div class="buttonMenu">
-        <button class="mainButton" onclick="changeDivShowed(1)">Sokoban AI</button>
-        <button class="mainButton" onclick="changeDivShowed(2)">KusBlo</button>
-        <button class="mainButton" onclick="changeDivShowed(3)">Pac Man AI</button>
+        <button class="mainButton" onclick="changeDivShown(1)">Sokoban AI</button>
+        <button class="mainButton" onclick="changeDivShown(2)">KusBlo</button>
+        <button class="mainButton" onclick="changeDivShown(3)">Pac Man AI</button>
       </div>
     </div>
 
@@ -108,34 +108,34 @@
 
 
 <script>
-  function changeDivShowed(article) {
+  function changeDivShown(article) {
     const leftMenuButton = document.getElementById('leftMenuButton');
     if (article == 1) {
-      document.getElementById('article1').setAttribute("class", "showed");
+      document.getElementById('article1').setAttribute("class", "shown");
       document.getElementById('article2').setAttribute("class", "hidden");
       document.getElementById('article3').setAttribute("class", "hidden");
       document.getElementById('choiceMenuDiv').setAttribute("class", "hidden");
-      leftMenuButton.setAttribute("class", "showedLeft");
+      leftMenuButton.setAttribute("class", "shownLeft");
     }
     if (article == 2) {
       document.getElementById('article1').setAttribute("class", "hidden");
-      document.getElementById('article2').setAttribute("class", "showed");
+      document.getElementById('article2').setAttribute("class", "shown");
       document.getElementById('article3').setAttribute("class", "hidden");
       document.getElementById('choiceMenuDiv').setAttribute("class", "hidden"); 
-      leftMenuButton.setAttribute("class", "showedLeft");
+      leftMenuButton.setAttribute("class", "shownLeft");
     }
     if (article == 3) {
       document.getElementById('article1').setAttribute("class", "hidden");
       document.getElementById('article2').setAttribute("class", "hidden");
-      document.getElementById('article3').setAttribute("class", "showed");
+      document.getElementById('article3').setAttribute("class", "shown");
       document.getElementById('choiceMenuDiv').setAttribute("class", "hidden");
-      leftMenuButton.setAttribute("class", "showedLeft");
+      leftMenuButton.setAttribute("class", "shownLeft");
     }
     if (article == 0) {
       document.getElementById('article1').setAttribute("class", "hidden");
       document.getElementById('article2').setAttribute("class", "hidden");
       document.getElementById('article3').setAttribute("class", "hidden");
-      document.getElementById('choiceMenuDiv').setAttribute("class", "showed");
+      document.getElementById('choiceMenuDiv').setAttribute("class", "shown");
       leftMenuButton.setAttribute("class", "hidden");
     }
   }

@@ -39,21 +39,21 @@
   </header>
   <main>
     <h1> Application </h1>
-    <div id="choiceMenuDiv" class="showed">
+    <div id="choiceMenuDiv" class="shown">
       <div class="buttonMenu">
-        <button class="mainButton" onclick="changeDivShowed(1)">Elf Reader</button>
-        <button class="mainButton" onclick="changeDivShowed(2)">MoonQuizz</button>
+        <button class="mainButton" onclick="changeDivShown(1)">Elf Reader</button>
+        <button class="mainButton" onclick="changeDivShown(2)">MoonQuizz</button>
       </div>
     </div>
 
     <div id="article1" class="hidden">
       <article class="pictVert">
-        <button class="homeButton" onclick="changeDivShowed(0)"><img src="./images/home.png" alt="home logo"></button>
-        <button class="nextButton" onclick="changeDivShowed(2)"><img src="./images/next.png" alt="next logo"></button>
+        <button class="homeButton" onclick="changeDivShown(0)"><img src="./images/home.png" alt="home logo"></button>
+        <button class="nextButton" onclick="changeDivShown(2)"><img src="./images/next.png" alt="next logo"></button>
 
         <h2>Elf reader</h2>
         <img src="./images/app/elf.png" alt="Picture of output of elf reader" class="vertical">
-        <p>Dissassembler and interpreter of ELF format file
+        <p>Dissassembler and interpreter of ELF format files
           <br><br> Group Work of 6 people
           <br><br> Coded in C
         </p>
@@ -62,14 +62,14 @@
 
     <div id="article2" class="hidden">
       <article class="pictVert">
-        <button class="prevButton" onclick="changeDivShowed(1)"><img src="./images/prev.png"
+        <button class="prevButton" onclick="changeDivShown(1)"><img src="./images/prev.png"
             alt="previous logo"></button>
-        <button class="homeButton" onclick="changeDivShowed(0)"><img src="./images/home.png" alt="home logo"> </button>
+        <button class="homeButton" onclick="changeDivShown(0)"><img src="./images/home.png" alt="home logo"> </button>
         <h2>Moonquizz</h2>
         <img src="./images/app/moonquizz.png" alt="Picture of mobile app Moonquizz" class="vertical">
-        <p>Created in Android studion
-          <br><br> In java and XML
-          <br><br> Educative mobile application for quizz
+        <p>Created in Android Studio
+         <br><br> In Java and XML
+          <br><br> Educative mobile application for quizzes
         </p>
       </article>
       </article>
@@ -79,8 +79,8 @@
   <aside id="leftAside">
     <div id="leftMenuButton" class="hidden">
       <div class="buttonMenu">
-        <button class="mainButton" onclick="changeDivShowed(1)">Elf Reader</button>
-        <button class="mainButton" onclick="changeDivShowed(2)">MoonQuizz</button>
+        <button class="mainButton" onclick="changeDivShown(1)">Elf Reader</button>
+        <button class="mainButton" onclick="changeDivShown(2)">MoonQuizz</button>
       </div>
   </aside>
   <aside id="rigthAside"></aside>
@@ -102,25 +102,25 @@
 
 
 <script>
-  function changeDivShowed(article) {
+  function changeDivShown(article) {
     const leftMenuButton = document.getElementById('leftMenuButton');
     if (article == 1) {
-      document.getElementById('article1').setAttribute("class", "showed");
+      document.getElementById('article1').setAttribute("class", "shown");
       document.getElementById('article2').setAttribute("class", "hidden");
       document.getElementById('choiceMenuDiv').setAttribute("class", "hidden");
-      leftMenuButton.setAttribute("class", "showedLeft");
+      leftMenuButton.setAttribute("class", "shownLeft");
     }
     if (article == 2) {
       document.getElementById('article1').setAttribute("class", "hidden");
-      document.getElementById('article2').setAttribute("class", "showed");
+      document.getElementById('article2').setAttribute("class", "shown");
       document.getElementById('choiceMenuDiv').setAttribute("class", "hidden");
-      leftMenuButton.setAttribute("class", "showedLeft");
+      leftMenuButton.setAttribute("class", "shownLeft");
     }
 
     if (article == 0) {
       document.getElementById('article1').setAttribute("class", "hidden");
       document.getElementById('article2').setAttribute("class", "hidden");
-      document.getElementById('choiceMenuDiv').setAttribute("class", "showed");
+      document.getElementById('choiceMenuDiv').setAttribute("class", "shown");
       leftMenuButton.setAttribute("class", "hidden");
     }
   }
