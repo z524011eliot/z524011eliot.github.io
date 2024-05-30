@@ -327,7 +327,7 @@ article h2 {
 }
 
 .mainButton:hover {
-    color: #111;
+    color: #071d34;
 }
 
 #choiceMenuDiv {
@@ -470,6 +470,13 @@ article p {
     nav ul a:hover {
         border-radius: 0%;
 
+    }
+    p {
+        font-size: 200%;
+    }
+
+    h2 {
+        font-size: 200%;
     }
 
     main {
